@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>短链接生成器</title>
+</head>
+<body>
+    <div class="jumbotron text-center">
+        <h1>短链接生成器</h1>
+        <p>你值得更短！</p>
+    </div>
+    <div class="container">
+        <form action="/gen_short_url" method="POST">
+              <div class="form-group">
+                <label>请把你长长长长长长长长长长长长的复制到此</label>
+                <input type="test" class="form-control" name="long_url">
+              </div>
+              <button type="submit" class="mt-1 btn btn-primary">一键舒服</button>
+        </form>
+    </div>
+    {% if short_url %}
+    <div class="container text-center">
+        <label>来了，你要的菜好了</label>
+        <a href="{{short_url}}">{{short_url}}</a>
+    </div>
+    {% endif %}
+</body>
+</html>

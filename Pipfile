@@ -1,0 +1,13 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = {version = "*", index = "https://mirrors.aliyun.com/pypi/simple/"}
+pymysql = {version = "*", index = "https://mirrors.alilyun.com/pypi/simple/"}
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
